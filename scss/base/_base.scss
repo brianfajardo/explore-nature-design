@@ -1,0 +1,27 @@
+/* Normalizing browser dependent styling, global reset */
+/* universal selector including before and after pseudo-elements */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  /* giving every element a box-sizing: inherit (border-box from body) */
+  box-sizing: inherit;
+}
+
+html {
+  /* root font size in html */
+  font-size: 62.5%;
+}
+
+body {
+  /* Using inheritance to set font --> will be inherited by child elements */
+  font-family: 'Lato', 'Helvetica', 'sans-serif';
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+  /* changes the box model so the borders and the paddings are no longer added to the total width/height specified for a box. */
+  box-sizing: border-box;
+}

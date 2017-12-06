@@ -1,0 +1,16 @@
+{
+  "name": "explore-nature",
+  "version": "1.0.0",
+  "description": "A project to help me practice UI/UX design, SCSS, front-end things.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run compile:scss",
+    "compile:scss":"node-sass scss/styles.scss assets/css/styles.css -watch"
+  },
+  "keywords": [],
+  "author": "Brian Fajardo",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  }
+}
