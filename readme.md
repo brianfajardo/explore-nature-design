@@ -8,3 +8,5 @@
   - SCSS preprocessor
   - Block Element Modifier (BEM)
   - 7-1 Pattern for folder architecture
+
+Note: SCSS folder is compiled via `node-sass` npm module to create the main styles.css
