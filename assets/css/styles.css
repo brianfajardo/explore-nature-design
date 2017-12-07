@@ -11,10 +11,15 @@
 
 /* line 12, scss/base/_base.scss */
 html {
-  /* root font size in html */
+  /* Root font size in html. Defining the 1rem equivalent in px. */
   font-size: 62.5%; }
 
 /* line 17, scss/base/_base.scss */
+body {
+  /* changes the box model so the borders and the paddings are no longer added to the total width/height specified for a box. */
+  box-sizing: border-box; }
+
+/* line 1, scss/base/_typography.scss */
 body {
   /* Using inheritance to set font --> will be inherited by child elements */
   font-family: 'Lato', 'Helvetica', 'sans-serif';
@@ -22,9 +27,7 @@ body {
   font-size: 1.6rem;
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
-  /* changes the box model so the borders and the paddings are no longer added to the total width/height specified for a box. */
-  box-sizing: border-box; }
+  padding: 3rem; }
 
 @keyframes moveInLeft {
   0% {
@@ -74,6 +77,44 @@ body {
   background-color: white;
   color: #777; }
 
+/* line 1, scss/layouts/_grid.scss */
+.row {
+  max-width: 114rem;
+  background: #eee;
+  margin: 0 auto; }
+  /* line 6, scss/layouts/_grid.scss */
+  .row:not(:last-child) {
+    margin-bottom: 5rem; }
+  /* line 2, scss/abstract/_mixins.scss */
+  .row:after {
+    content: '';
+    display: table;
+    clear: both; }
+  /* line 14, scss/layouts/_grid.scss */
+  .row [class^='col-'] {
+    float: left; }
+    /* line 17, scss/layouts/_grid.scss */
+    .row [class^='col-']:not(:last-child) {
+      margin-right: 3rem; }
+  /* line 23, scss/layouts/_grid.scss */
+  .row .col-1-of-2 {
+    width: calc((100% - 3rem) / 2); }
+  /* line 29, scss/layouts/_grid.scss */
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 3rem) / 3); }
+  /* line 34, scss/layouts/_grid.scss */
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 3rem) / 3) + 3rem); }
+  /* line 40, scss/layouts/_grid.scss */
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 3rem) / 4); }
+  /* line 44, scss/layouts/_grid.scss */
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 3rem) / 4) + 3rem); }
+  /* line 48, scss/layouts/_grid.scss */
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 3rem) / 4) + 2 * 3rem); }
+
 /* line 1, scss/layouts/_header.scss */
 .header {
   height: 95vh;
@@ -113,7 +154,7 @@ body {
     animation-name: moveInLeft;
     animation-duration: 1.5s;
     animation-timing-function: ease-out; }
-  /* line 53, scss/layouts/_header.scss */
+  /* line 51, scss/layouts/_header.scss */
   .heading-primary--sub {
     display: block;
     font-size: 3rem;
