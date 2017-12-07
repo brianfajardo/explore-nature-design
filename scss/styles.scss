@@ -1,6 +1,19 @@
-// Base
-@import './base/_base.scss';
-@import './base/_animations.scss';
+// abstract
+@import './abstract/_variables.scss';
+@import './abstract/_functions.scss';
+@import './abstract/_mixins.scss';
 
-// Layouts
+// base
+@import './base/_base.scss';
+@import './base/_typography.scss';
+@import './base/_animations.scss';
+@import './base/_utilities.scss';
+
+// components
+@import './components/_button.scss';
+
+// layouts
 @import './layouts/_header.scss';
+
+// pages
+@import './pages/_home.scss';

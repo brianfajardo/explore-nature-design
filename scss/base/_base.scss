@@ -10,18 +10,11 @@
 }
 
 html {
-  /* root font size in html */
+  /* Root font size in html. Defining the 1rem equivalent in px. */
   font-size: 62.5%;
 }
 
 body {
-  /* Using inheritance to set font --> will be inherited by child elements */
-  font-family: 'Lato', 'Helvetica', 'sans-serif';
-  font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
   /* changes the box model so the borders and the paddings are no longer added to the total width/height specified for a box. */
   box-sizing: border-box;
 }

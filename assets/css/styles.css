@@ -50,6 +50,30 @@ body {
     opacity: 1;
     transform: translate(0); } }
 
+/* line 2, scss/components/_button.scss */
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  transition: all 0.2s;
+  animation: moveInBottom 1.5s ease-out; }
+
+/* line 13, scss/components/_button.scss */
+.btn:hover {
+  transform: translateY(-0.15rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
+
+/* line 18, scss/components/_button.scss */
+.btn:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 0.1rem rgba(0, 0, 0, 0.3); }
+
+/* line 23, scss/components/_button.scss */
+.btn--white {
+  background-color: white;
+  color: #777; }
+
 /* line 1, scss/layouts/_header.scss */
 .header {
   height: 95vh;
@@ -58,71 +82,41 @@ body {
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative; }
+  /* line 14, scss/layouts/_header.scss */
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  /* line 20, scss/layouts/_header.scss */
+  .header__logo {
+    height: 3.5rem; }
+  /* line 24, scss/layouts/_header.scss */
+  .header__text-box {
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
 
-/* line 14, scss/layouts/_header.scss */
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem; }
-
-/* line 20, scss/layouts/_header.scss */
-.header__logo {
-  height: 3.5rem; }
-
-/* line 24, scss/layouts/_header.scss */
-.header__text-box {
-  text-align: center;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
-
-/* line 32, scss/layouts/_header.scss */
+/* line 33, scss/layouts/_header.scss */
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 6rem; }
-
-/* line 40, scss/layouts/_header.scss */
-.heading-primary--main {
-  display: block;
-  font-size: 8rem;
-  font-weight: 500;
-  letter-spacing: 2rem;
-  animation-name: moveInLeft;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-out; }
-
-/* line 53, scss/layouts/_header.scss */
-.heading-primary--sub {
-  display: block;
-  font-size: 3rem;
-  font-weight: 500;
-  letter-spacing: 1rem;
-  animation: moveInRight 1.5s ease-out; }
-
-/* line 62, scss/layouts/_header.scss */
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1.5rem 4rem;
-  display: inline-block;
-  transition: all 0.2s;
-  animation: moveInBottom 1.5s ease-out; }
-
-/* line 73, scss/layouts/_header.scss */
-.btn:hover {
-  transform: translateY(-0.15rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
-
-/* line 78, scss/layouts/_header.scss */
-.btn:active {
-  transform: translateY(-0.1rem);
-  box-shadow: 0 0.5rem 0.1rem rgba(0, 0, 0, 0.3); }
-
-/* line 83, scss/layouts/_header.scss */
-.btn--white {
-  background-color: #fff;
-  color: #777; }
+  /* line 40, scss/layouts/_header.scss */
+  .heading-primary--main {
+    display: block;
+    font-size: 8rem;
+    font-weight: 500;
+    letter-spacing: 2rem;
+    animation-name: moveInLeft;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out; }
+  /* line 53, scss/layouts/_header.scss */
+  .heading-primary--sub {
+    display: block;
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: 1rem;
+    animation: moveInRight 1.5s ease-out; }
