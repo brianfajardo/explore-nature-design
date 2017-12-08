@@ -7,7 +7,7 @@
   // ensure that whatever the viewport size is that the top of the image stays at the top of the container
   background-position: top;
   // specify a polygon in which the image will still be visible
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
   position: relative;
 
   // SCSS nesting!
@@ -27,33 +27,5 @@
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-}
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  // Hacky fix for shaky animations when they end
-  backface-visibility: hidden;
-  margin-bottom: 6rem;
-
-  &--main {
-    display: block;
-    font-size: 8rem;
-    font-weight: 500;
-    letter-spacing: 2rem;
-
-    animation-name: moveInLeft;
-    animation-duration: 1.5s;
-    animation-timing-function: ease-out;
-  }
-
-  &--sub {
-    display: block;
-    font-size: 3rem;
-    font-weight: 500;
-    letter-spacing: 1rem;
-
-    animation: moveInRight 1.5s ease-out;
   }
 }

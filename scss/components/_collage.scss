@@ -1,0 +1,41 @@
+.collage {
+  position: relative;
+  backface-visibility: hidden;
+
+  &__photo {
+    width: 60%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    transition: all 0.2s;
+    // outline-offset: 1rem;
+
+    &--img1 {
+      left: 0;
+      top: 0;
+    }
+
+    &--img2 {
+      right: 0;
+      top: 9rem;
+    }
+
+    &--img3 {
+      left: 17%;
+      top: 21rem;
+    }
+
+    &:hover {
+      // outline: 0.4rem solid $color-green-2;
+      transform: scale(1.05) translateY((-1rem));
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+      z-index: 2;
+    }
+  }
+
+  // collage:hover collage__photo:not(:hover)
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.95);
+  }
+}
