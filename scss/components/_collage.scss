@@ -4,11 +4,11 @@
 
   &__photo {
     width: 60%;
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.3);
     border-radius: 5px;
     position: absolute;
     z-index: 1;
-    transition: all 0.2s;
+    transition: all 0.5s;
     // outline-offset: 1rem;
 
     &--img1 {
@@ -28,8 +28,8 @@
 
     &:hover {
       // outline: 0.4rem solid $color-green-2;
-      transform: scale(1.05) translateY((-1rem));
-      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+      transform: scale(1.03) translateY((-1rem));
+      box-shadow: 0 2.5rem 3rem rgba(0, 0, 0, 0.4);
       z-index: 2;
     }
   }
