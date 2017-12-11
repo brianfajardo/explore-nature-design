@@ -1,0 +1,107 @@
+.card {
+  // Overall card functionality
+  perspective: 150rem;
+  // firefox compatibility
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 52rem;
+
+  &__side {
+    position: absolute;
+    height: 52rem;
+    backface-visibility: hidden;
+    border-radius: 0.3rem;
+    box-shadow: 0 1.5rem 3rem rgba($color-black, 0.15);
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 1s ease;
+
+    &--front {
+      background-color: $color-white;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+
+      &-rome {
+      }
+
+      &-sweden {
+      }
+    }
+  }
+
+  // .card:hover .card__side
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0deg);
+  }
+
+  // front side styling
+  &__image {
+    background-size: cover;
+    height: 24rem;
+    background-position: bottom;
+    // background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+
+    &--rome {
+      background-image: url(../images/unsplash_6.jpg);
+    }
+
+    &--stockholm {
+      background-image: url(../images/unsplash_7.jpg);
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 500;
+    // text-transform: uppercase;
+    color: $color-black;
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+
+  &__details {
+    padding: 0.5rem;
+
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-grey-light;
+        }
+      }
+    }
+  }
+
+  &__booking {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__price {
+    text-align: center;
+    font-size: 6rem;
+    font-weight: 700;
+    margin-bottom: 5rem;
+    color: $color-white;
+    background-color: $color-green-2
+  }
+}

@@ -206,6 +206,86 @@ body {
   font-size: 6rem;
   color: #fafafa; }
 
+/* line 1, scss/components/_card.scss */
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 52rem; }
+  /* line 9, scss/components/_card.scss */
+  .card__side {
+    position: absolute;
+    height: 52rem;
+    backface-visibility: hidden;
+    border-radius: 0.3rem;
+    box-shadow: 0 1.5rem 3rem rgba(17, 17, 17, 0.15);
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 1s ease; }
+    /* line 21, scss/components/_card.scss */
+    .card__side--front {
+      background-color: white; }
+    /* line 25, scss/components/_card.scss */
+    .card__side--back {
+      transform: rotateY(180deg); }
+  /* line 37, scss/components/_card.scss */
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  /* line 41, scss/components/_card.scss */
+  .card:hover .card__side--back {
+    transform: rotateY(0deg); }
+  /* line 46, scss/components/_card.scss */
+  .card__image {
+    background-size: cover;
+    height: 24rem;
+    background-position: bottom;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); }
+    /* line 54, scss/components/_card.scss */
+    .card__image--rome {
+      background-image: url(../images/unsplash_6.jpg); }
+    /* line 58, scss/components/_card.scss */
+    .card__image--stockholm {
+      background-image: url(../images/unsplash_7.jpg); }
+  /* line 63, scss/components/_card.scss */
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 500;
+    color: #111;
+    text-align: center;
+    margin-top: 1.5rem; }
+  /* line 72, scss/components/_card.scss */
+  .card__details {
+    padding: 0.5rem; }
+    /* line 75, scss/components/_card.scss */
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      /* line 80, scss/components/_card.scss */
+      .card__details ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem; }
+        /* line 85, scss/components/_card.scss */
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px solid #f7f7f7; }
+  /* line 92, scss/components/_card.scss */
+  .card__booking {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  /* line 99, scss/components/_card.scss */
+  .card__price {
+    text-align: center;
+    font-size: 6rem;
+    font-weight: 700;
+    margin-bottom: 5rem;
+    color: white;
+    background-color: #24a858; }
+
 /* line 1, scss/layouts/_grid.scss */
 .row {
   max-width: 114rem;
@@ -246,7 +326,7 @@ body {
 /* line 1, scss/layouts/_header.scss */
 .header {
   height: 95vh;
-  background-image: url("../../assets/images/unsplash_1.jpg");
+  background-image: url("../images/unsplash_1.jpg");
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
@@ -269,7 +349,7 @@ body {
 
 /* line 1, scss/pages/_home.scss */
 .section-about {
-  background: #fafafa;
+  background: #f7f7f7;
   padding: 20rem 0;
   margin-top: -13vh;
   clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%); }
@@ -277,6 +357,11 @@ body {
 /* line 9, scss/pages/_home.scss */
 .section-features {
   padding: 20rem 0;
-  background-image: url("../../assets/images/unsplash_5.jpg");
+  background-image: url("../images/unsplash_5.jpg");
   background-size: cover;
   background-position: bottom; }
+
+/* line 16, scss/pages/_home.scss */
+.section-tours {
+  padding: 20rem 0;
+  background: #f7f7f7; }

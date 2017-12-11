@@ -1,7 +1,7 @@
 .header {
   // at every point the height of this element should be 95% of the view port height
   height: 95vh;
-  background-image: url('../../assets/images/unsplash_1.jpg');
+  background-image: url('../images/unsplash_1.jpg');
   // whatever the width of the viewport, it will always try to fit the element inside the box
   background-size: cover;
   // ensure that whatever the viewport size is that the top of the image stays at the top of the container
