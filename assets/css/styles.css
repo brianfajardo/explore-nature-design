@@ -73,14 +73,30 @@ body {
   text-align: center; }
 
 /* line 5, scss/base/_utilities.scss */
+.white {
+  color: white; }
+
+/* line 9, scss/base/_utilities.scss */
+.margin-top-sm {
+  margin-top: 1.5rem; }
+
+/* line 13, scss/base/_utilities.scss */
+.margin-top-md {
+  margin-top: 5rem; }
+
+/* line 17, scss/base/_utilities.scss */
+.margin-top-lg {
+  margin-top: 8rem; }
+
+/* line 21, scss/base/_utilities.scss */
 .margin-btm-sm {
   margin-bottom: 1.5rem; }
 
-/* line 9, scss/base/_utilities.scss */
+/* line 25, scss/base/_utilities.scss */
 .margin-btm-md {
   margin-bottom: 5rem; }
 
-/* line 13, scss/base/_utilities.scss */
+/* line 29, scss/base/_utilities.scss */
 .margin-btm-lg {
   margin-bottom: 8rem; }
 
@@ -141,19 +157,17 @@ body {
   font-size: 1.6rem;
   padding: 0.8rem;
   border-radius: 5px;
-  transition: all 0.2s; }
+  backface-visibility: hidden; }
 
-/* line 43, scss/components/_button.scss */
+/* line 44, scss/components/_button.scss */
+.btn-text--white {
+  color: white !important; }
+
+/* line 48, scss/components/_button.scss */
 .btn-text:hover {
   background-color: #24a858;
   color: white;
-  transform: translateY(-0.2rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
-
-/* line 50, scss/components/_button.scss */
-.btn-text:active {
-  transform: translateY(-0.15rem);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 /* line 1, scss/components/_collage.scss */
 .collage {
@@ -286,6 +300,71 @@ body {
     color: white;
     background-color: #24a858; }
 
+/* line 1, scss/components/_review.scss */
+.review {
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(17, 17, 17, 0.1);
+  padding: 5rem;
+  background-color: #fafafa;
+  transform: skewX(-12deg); }
+  /* line 10, scss/components/_review.scss */
+  .review__image-container {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg); }
+  /* line 25, scss/components/_review.scss */
+  .review__image {
+    height: 100%;
+    transform: translateX(-4rem) scale(1.2);
+    backface-visibility: hidden;
+    transition: all 0.5s; }
+  /* line 32, scss/components/_review.scss */
+  .review__text {
+    transform: skewX(12deg); }
+  /* line 36, scss/components/_review.scss */
+  .review__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: center;
+    opacity: 0;
+    backface-visibility: hidden;
+    transition: all 0.5s; }
+  /* line 51, scss/components/_review.scss */
+  .review:hover .review__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  /* line 56, scss/components/_review.scss */
+  .review:hover .review__image {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px) brightness(85%); }
+  /* line 61, scss/components/_review.scss */
+  .review__background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.85;
+    overflow: hidden; }
+    /* line 71, scss/components/_review.scss */
+    .review__background-video--content {
+      height: 100%;
+      width: 100%;
+      object-fit: cover; }
+
 /* line 1, scss/layouts/_grid.scss */
 .row {
   max-width: 114rem;
@@ -365,3 +444,8 @@ body {
 .section-tours {
   padding: 20rem 0;
   background: #f7f7f7; }
+
+/* line 21, scss/pages/_home.scss */
+.section-testimonials {
+  padding: 20rem 0;
+  position: relative; }
