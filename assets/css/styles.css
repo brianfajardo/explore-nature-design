@@ -449,3 +449,21 @@ body {
 .section-testimonials {
   padding: 20rem 0;
   position: relative; }
+
+/* line 26, scss/pages/_home.scss */
+.section-booking {
+  padding: 20rem 0;
+  background-image: linear-gradient(to right bottom, white, #f7f7f7); }
+
+/* line 35, scss/pages/_home.scss */
+.booking {
+  background-image: linear-gradient(115deg, rgba(255, 255, 255, 0.9) 0%, rgba(250, 250, 250, 0.9) 50%, transparent 50%), url("../images/unsplash_11.jpg");
+  background-size: 100%;
+  border-radius: 3px;
+  position: top;
+  box-shadow: 0 1.5rem 4rem rgba(17, 17, 17, 0.35);
+  height: 50rem; }
+  /* line 50, scss/pages/_home.scss */
+  .booking__form {
+    width: 50%;
+    padding: 6rem; }
