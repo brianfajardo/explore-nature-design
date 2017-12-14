@@ -19,6 +19,10 @@ body {
   /* changes the box model so the borders and the paddings are no longer added to the total width/height specified for a box. */
   box-sizing: border-box; }
 
+/* line 22, scss/base/_base.scss */
+button {
+  cursor: pointer; }
+
 /* line 1, scss/base/_typography.scss */
 body {
   /* Using inheritance to set font --> will be inherited by child elements */
@@ -70,35 +74,35 @@ body {
 
 /* line 1, scss/base/_utilities.scss */
 .center {
-  text-align: center; }
+  text-align: center !important; }
 
 /* line 5, scss/base/_utilities.scss */
 .white {
-  color: white; }
+  color: white !important; }
 
 /* line 9, scss/base/_utilities.scss */
 .margin-top-sm {
-  margin-top: 1.5rem; }
+  margin-top: 1.5rem !important; }
 
 /* line 13, scss/base/_utilities.scss */
 .margin-top-md {
-  margin-top: 5rem; }
+  margin-top: 5rem !important; }
 
 /* line 17, scss/base/_utilities.scss */
 .margin-top-lg {
-  margin-top: 8rem; }
+  margin-top: 8rem !important; }
 
 /* line 21, scss/base/_utilities.scss */
 .margin-btm-sm {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem !important; }
 
 /* line 25, scss/base/_utilities.scss */
 .margin-btm-md {
-  margin-bottom: 5rem; }
+  margin-bottom: 5rem !important; }
 
 /* line 29, scss/base/_utilities.scss */
 .margin-btm-lg {
-  margin-bottom: 8rem; }
+  margin-bottom: 8rem !important; }
 
 @keyframes moveInLeft {
   0% {
@@ -125,31 +129,33 @@ body {
     transform: translate(0); } }
 
 /* line 2, scss/components/_button.scss */
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-decoration: none;
   padding: 1.5rem 4rem;
   display: inline-block;
   border-radius: 5px;
   transition: all 0.2s;
   color: #111;
+  border: none;
   animation: moveInBottom 1.5s ease-out; }
 
-/* line 15, scss/components/_button.scss */
+/* line 19, scss/components/_button.scss */
 .btn:hover {
   transform: translateY(-0.2rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
 
-/* line 20, scss/components/_button.scss */
-.btn:active {
+/* line 24, scss/components/_button.scss */
+.btn:active, .btn:focus {
+  outline: none;
   transform: translateY(-0.15rem);
   box-shadow: 0 0.5rem 0.1rem rgba(0, 0, 0, 0.3); }
 
-/* line 25, scss/components/_button.scss */
+/* line 31, scss/components/_button.scss */
 .btn--white {
   background-color: white;
   color: #777; }
 
-/* line 32, scss/components/_button.scss */
+/* line 38, scss/components/_button.scss */
 .btn-text:link, .btn-text:visited {
   color: #24a858;
   display: inline-block;
@@ -159,11 +165,11 @@ body {
   border-radius: 5px;
   backface-visibility: hidden; }
 
-/* line 44, scss/components/_button.scss */
+/* line 50, scss/components/_button.scss */
 .btn-text--white {
   color: white !important; }
 
-/* line 48, scss/components/_button.scss */
+/* line 54, scss/components/_button.scss */
 .btn-text:hover {
   background-color: #24a858;
   color: white;
@@ -364,6 +370,95 @@ body {
       height: 100%;
       width: 100%;
       object-fit: cover; }
+
+/* line 2, scss/components/_form.scss */
+.form__group:not(:last-child) {
+  margin-bottom: 2rem; }
+
+/* line 6, scss/components/_form.scss */
+.form__input {
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: inherit;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 90%;
+  display: block;
+  transition: all 0.3s; }
+  /* line 19, scss/components/_form.scss */
+  .form__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(17, 17, 17, 0.4);
+    border-bottom: 3px solid #24a858; }
+    /* line 25, scss/components/_form.scss */
+    .form__input:focus::-webkit-input-placeholder {
+      color: #777; }
+  /* line 30, scss/components/_form.scss */
+  .form__input:focus:invalid {
+    border-bottom: 3px solid #ff4d4d; }
+
+/* line 35, scss/components/_form.scss */
+.form__label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.3s; }
+
+/* line 45, scss/components/_form.scss */
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem); }
+
+/* line 52, scss/components/_form.scss */
+.form__radio-group {
+  width: 49%;
+  display: inline-block; }
+
+/* line 57, scss/components/_form.scss */
+.form__radio-input {
+  display: none; }
+
+/* line 61, scss/components/_form.scss */
+.form__radio-label {
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 3.5rem; }
+
+/* line 68, scss/components/_form.scss */
+.form__radio-button {
+  height: 3rem;
+  width: 3rem;
+  border: 5px solid #24a858;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -0.5rem; }
+  /* line 78, scss/components/_form.scss */
+  .form__radio-button::after {
+    content: '';
+    display: block;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #24a858;
+    opacity: 0;
+    transition: opacity 0.2s; }
+
+/* line 95, scss/components/_form.scss */
+.form__radio-input:checked + .form__radio-label .form__radio-button::after {
+  opacity: 1; }
 
 /* line 1, scss/layouts/_grid.scss */
 .row {

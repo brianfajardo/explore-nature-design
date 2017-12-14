@@ -18,3 +18,7 @@ body {
   /* changes the box model so the borders and the paddings are no longer added to the total width/height specified for a box. */
   box-sizing: border-box;
 }
+
+button {
+  cursor: pointer;
+}

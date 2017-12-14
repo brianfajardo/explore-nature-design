@@ -223,14 +223,36 @@
           <div class="booking__form">
             <!-- Form -->
             <form action="#" class="form">
-              <h2 class="heading-secondary center margin-btm-md">Book now</h2>
+              <h2 class="heading-secondary center margin-btm-md">Plan your trip now!</h2>
+              <!-- Name input -->
               <div class="form__group">
-                <label for="fullname" class="form__label">Full name</label>
                 <input id="fullname" type="text" class="form__input" placeholder="Full Name" required>
+                <label for="fullname" class="form__label">Full name</label>
               </div>
+              <!-- Email input -->
               <div class="form__group">
-                <label for="fullname" class="form__label">Email</label>
-                <input type="text" class="form__input" placeholder="Email" required>
+                <input type="email" class="form__input" id="email" placeholder="Email" required>
+                <label for="email" class="form__label">Email</label>
+              </div>
+              <!-- Radio button options -->
+              <div class="form__group">
+                <div class="form__radio-group">
+                  <input type="radio" class="form__radio-input" id="couple" name="groupSize">
+                  <label for="couple" class="form__radio-label">
+                    <span class="form__radio-button"></span>
+                    Couples tour
+                  </label>
+                </div>
+                <div class="form__radio-group">
+                  <input type="radio" class="form__radio-input" id="group" name="groupSize">
+                  <label for="group" class="form__radio-label">
+                    <span class="form__radio-button"></span>
+                    Large group tour
+                  </label>
+                </div>
+              </div>
+              <div class="form__group margin-top-md">
+                <button class="btn btn--green">Continue &rarr;</button>
               </div>
             </form>
           </div>
