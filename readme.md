@@ -1,5 +1,7 @@
 # 🌲 Explore Tours
 
+Still in the works, but you can check out where its at: https://brianfajardo.github.io/explore-nature-design/
+
 ### Purpose of this frontend design project:
 - To get better at visual design (UI)
 - Work more with different native HTML components (React has spoiled us all!)
