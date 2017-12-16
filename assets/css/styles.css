@@ -521,6 +521,49 @@ body {
     left: 50%;
     transform: translate(-50%, -50%); }
 
+/* line 1, scss/layouts/_footer.scss */
+.footer {
+  background-color: #444444;
+  padding: 10rem 0;
+  font-size: 1.4rem; }
+  /* line 6, scss/layouts/_footer.scss */
+  .footer__logo-container {
+    text-align: center; }
+  /* line 10, scss/layouts/_footer.scss */
+  .footer__logo {
+    width: 15rem;
+    height: auto;
+    margin-bottom: 8rem; }
+  /* line 16, scss/layouts/_footer.scss */
+  .footer__navigation {
+    border-top: 1px solid white;
+    padding-top: 2rem;
+    display: inline-block; }
+  /* line 22, scss/layouts/_footer.scss */
+  .footer__list {
+    list-style: none; }
+  /* line 26, scss/layouts/_footer.scss */
+  .footer__item {
+    display: inline-block; }
+    /* line 29, scss/layouts/_footer.scss */
+    .footer__item:not(:last-child) {
+      margin-right: 1.5rem; }
+  /* line 35, scss/layouts/_footer.scss */
+  .footer__link:link, .footer__link:visited {
+    color: #f7f7f7;
+    display: inline-block;
+    text-decoration: none; }
+  /* line 42, scss/layouts/_footer.scss */
+  .footer__link:hover, .footer__link:active {
+    color: #24a858;
+    box-shadow: 0 1rem 2rem rgba(17, 17, 17, 0.4); }
+  /* line 49, scss/layouts/_footer.scss */
+  .footer__copyright {
+    text-align: left;
+    border-top: 1px solid white;
+    padding-top: 2rem;
+    width: 80%; }
+
 /* line 1, scss/pages/_home.scss */
 .section-about {
   background: #f7f7f7;
