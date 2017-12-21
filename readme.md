@@ -10,5 +10,8 @@ Still in the works, but you can check out where its at: https://brianfajardo.git
   - SCSS preprocessor
   - Block Element Modifier (BEM)
   - 7-1 Pattern for folder architecture
+  - responsive media queries
+- Discover new ways to optimize resource loading for performance
+  - ex. Image cropping and compressing
 
 Note: SCSS folder is compiled via `node-sass` npm module to create the main styles.css

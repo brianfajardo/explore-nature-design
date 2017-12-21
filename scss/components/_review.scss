@@ -5,14 +5,12 @@
   padding: 5rem;
   background-color: $color-white-off;
   transform: skewX(-12deg);
-  // background-color: rgba($color-white, 0.4);
 
   &__image-container {
     position: relative;
     width: 15rem;
     height: 15rem;
     float: left;
-    // background-color: pink;
     // requires dimension and to be floated
     shape-outside: circle(50% at 50% 50%);
     // safari compatability

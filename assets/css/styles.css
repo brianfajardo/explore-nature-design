@@ -1,3 +1,21 @@
+/*
+MEDIA QUERIES
+0 - 600 px --> mobile
+600 - 900 px --> tablet portrait
+900 - 1200 px --> tablet landscape
+[1200 - 1800 px] is where our normal styles apply
+1800 px ~ --> desktop
+
+$breakpoint parameters:
+1. mobile
+2. tablet-port
+3. tablet-land
+4. desktop
+
+1em = 16px, convert our media queries to em for better accessibility
+
+Media query mixin using breakpoint as an argument!
+*/
 /* Normalizing browser dependent styling, global reset */
 /* universal selector including before and after pseudo-elements */
 /* line 3, scss/base/_base.scss */
@@ -13,13 +31,21 @@
 html {
   /* Root font size in html. Defining the 1rem equivalent in px. */
   font-size: 62.5%; }
+  @media (max-width: 37.5em) {
+    /* line 12, scss/base/_base.scss */
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    /* line 12, scss/base/_base.scss */
+    html {
+      font-size: 75%; } }
 
-/* line 17, scss/base/_base.scss */
+/* line 34, scss/base/_base.scss */
 body {
   /* changes the box model so the borders and the paddings are no longer added to the total width/height specified for a box. */
   box-sizing: border-box; }
 
-/* line 22, scss/base/_base.scss */
+/* line 39, scss/base/_base.scss */
 button {
   cursor: pointer; }
 
@@ -314,7 +340,7 @@ body {
   padding: 5rem;
   background-color: #fafafa;
   transform: skewX(-12deg); }
-  /* line 10, scss/components/_review.scss */
+  /* line 9, scss/components/_review.scss */
   .review__image-container {
     position: relative;
     width: 15rem;
@@ -325,14 +351,14 @@ body {
     clip-path: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg); }
-  /* line 25, scss/components/_review.scss */
+  /* line 23, scss/components/_review.scss */
   .review__image {
     height: 100%;
     transform: translateX(-4rem) scale(1.2); }
-  /* line 30, scss/components/_review.scss */
+  /* line 28, scss/components/_review.scss */
   .review__text {
     transform: skewX(12deg); }
-  /* line 34, scss/components/_review.scss */
+  /* line 32, scss/components/_review.scss */
   .review__caption {
     position: absolute;
     top: 50%;
@@ -345,15 +371,15 @@ body {
     opacity: 0;
     backface-visibility: hidden;
     transition: all 0.5s; }
-  /* line 49, scss/components/_review.scss */
+  /* line 47, scss/components/_review.scss */
   .review:hover .review__caption {
     opacity: 1;
     transform: translate(-50%, -50%); }
-  /* line 54, scss/components/_review.scss */
+  /* line 52, scss/components/_review.scss */
   .review:hover .review__image {
     transform: translateX(-4rem) scale(1);
     filter: blur(3px) brightness(85%); }
-  /* line 59, scss/components/_review.scss */
+  /* line 57, scss/components/_review.scss */
   .review__background-video {
     position: absolute;
     top: 0;
@@ -363,7 +389,7 @@ body {
     z-index: -1;
     opacity: 0.85;
     overflow: hidden; }
-    /* line 69, scss/components/_review.scss */
+    /* line 67, scss/components/_review.scss */
     .review__background-video--content {
       height: 100%;
       width: 100%;

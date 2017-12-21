@@ -5,3 +5,49 @@
     clear: both;
   }
 }
+
+/*
+MEDIA QUERIES
+0 - 600 px --> mobile
+600 - 900 px --> tablet portrait
+900 - 1200 px --> tablet landscape
+[1200 - 1800 px] is where our normal styles apply
+1800 px ~ --> desktop
+
+$breakpoint parameters:
+1. mobile
+2. tablet-port
+3. tablet-land
+4. desktop
+
+1em = 16px, convert our media queries to em for better accessibility
+
+Media query mixin using breakpoint as an argument!
+*/
+
+@mixin responsive($breakpoint) {
+
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) { // 600px / 16 = 37.5em
+      @content; // allows us to pass a block of code into this mixin
+    }
+  }
+
+  @if $breakpoint == tablet-port {
+    @media (max-width: 56.25em) { // 900px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet-land {
+    @media (max-width: 75em) { // 1200px
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop {
+    @media (min-width: 112.5em) { // 1800px
+      @content;
+    }
+  }
+}
