@@ -328,13 +328,11 @@ body {
   /* line 25, scss/components/_review.scss */
   .review__image {
     height: 100%;
-    transform: translateX(-4rem) scale(1.2);
-    backface-visibility: hidden;
-    transition: all 0.5s; }
-  /* line 32, scss/components/_review.scss */
+    transform: translateX(-4rem) scale(1.2); }
+  /* line 30, scss/components/_review.scss */
   .review__text {
     transform: skewX(12deg); }
-  /* line 36, scss/components/_review.scss */
+  /* line 34, scss/components/_review.scss */
   .review__caption {
     position: absolute;
     top: 50%;
@@ -347,15 +345,15 @@ body {
     opacity: 0;
     backface-visibility: hidden;
     transition: all 0.5s; }
-  /* line 51, scss/components/_review.scss */
+  /* line 49, scss/components/_review.scss */
   .review:hover .review__caption {
     opacity: 1;
     transform: translate(-50%, -50%); }
-  /* line 56, scss/components/_review.scss */
+  /* line 54, scss/components/_review.scss */
   .review:hover .review__image {
     transform: translateX(-4rem) scale(1);
     filter: blur(3px) brightness(85%); }
-  /* line 61, scss/components/_review.scss */
+  /* line 59, scss/components/_review.scss */
   .review__background-video {
     position: absolute;
     top: 0;
@@ -365,7 +363,7 @@ body {
     z-index: -1;
     opacity: 0.85;
     overflow: hidden; }
-    /* line 71, scss/components/_review.scss */
+    /* line 69, scss/components/_review.scss */
     .review__background-video--content {
       height: 100%;
       width: 100%;
