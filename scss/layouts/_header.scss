@@ -8,7 +8,13 @@
   background-position: top;
   // specify a polygon in which the image will still be visible
   clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
   position: relative;
+
+  @include responsive(mobile) {
+    clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
+  }
 
   // SCSS nesting!
   &__logo-box {

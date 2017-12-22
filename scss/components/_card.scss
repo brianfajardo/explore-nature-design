@@ -53,10 +53,18 @@
 
     &--rome {
       background-image: url(../images/unsplash_6.jpg);
+
+      @include responsive(tablet-portrait) {
+        background-position: center;
+      }
     }
 
     &--stockholm {
       background-image: url(../images/unsplash_7.jpg);
+
+      @include responsive(tablet-portrait) {
+        background-position: center;
+      }
     }
   }
 
@@ -102,6 +110,50 @@
     font-weight: 700;
     margin-bottom: 5rem;
     color: $color-white;
-    background-color: $color-green-2
+    background-color: $color-green-2;
+  }
+
+  // Cards hover effects does not apply with touchscreen devices!
+  @include responsive(tablet-portrait) {
+    height: auto;
+
+    &__side {
+      position: relative;
+      height: auto;
+      border-radius: 0.3rem;
+      box-shadow: none;
+
+      &--back {
+        transform: rotateY(0deg);
+      }
+    }
+
+    // .card:hover .card__side
+    &:hover &__side--front {
+      transform: rotateY(0deg);
+    }
+
+    &__booking {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0, 0);
+      text-align: center;
+
+      .btn {
+        width: 100%;
+        background-color: $color-green-3;
+        color: $color-white;
+        border-radius: 0;
+      }
+    }
+
+    &__price {
+      font-size: 3rem;
+      font-weight: 700;
+      color: $color-white;
+      background-color: $color-green-2;
+      margin-bottom: 0;
+    }
   }
 }

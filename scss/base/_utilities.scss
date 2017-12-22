@@ -24,8 +24,16 @@
 
 .margin-btm-md {
   margin-bottom: 5rem !important;
+
+  @include responsive(tablet-portrait) {
+    margin-bottom: 3rem !important;
+  }
 }
 
 .margin-btm-lg {
   margin-bottom: 8rem !important;
+
+  @include responsive(tablet-portrait) {
+    margin-bottom: 5rem !important;
+  }
 }

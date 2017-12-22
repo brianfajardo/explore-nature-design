@@ -13,11 +13,13 @@ html {
   /* Root font size in html. Defining the 1rem equivalent in px. */
   font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
 
-  @include responsive(tab-land) { // width < 900px?
+  @include responsive(tablet-landscape) {
+    // width < 900px?
     font-size: 56.25%; // 1rem = 9px; 9/16 = 56.25%
   }
 
-  @include responsive(phone) { // width < 600px?
+  @include responsive(tablet-portrait) {
+    // width < 600px?
     font-size: 50%; // 1rem = 8px; 8/16 = 50%
   }
 
@@ -34,6 +36,11 @@ html {
 body {
   /* changes the box model so the borders and the paddings are no longer added to the total width/height specified for a box. */
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include responsive(tablet-portrait) {
+    padding: 0;
+  }
 }
 
 button {

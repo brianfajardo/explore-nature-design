@@ -1,7 +1,11 @@
 .footer {
-  background-color: lighten($color-black, 20%);
+  background-color: $color-black;
   padding: 10rem 0;
   font-size: 1.4rem;
+
+  @include responsive(tablet-portrait) {
+    padding: 8rem 0;
+  }
 
   &__logo-container {
     text-align: center;
@@ -11,12 +15,21 @@
     width: 15rem;
     height: auto;
     margin-bottom: 8rem;
+
+    @include responsive(tablet-portrait) {
+      margin-bottom: 4rem;
+    }
   }
 
   &__navigation {
     border-top: 1px solid $color-white;
     padding-top: 2rem;
     display: inline-block;
+
+    @include responsive(tablet-portrait) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__list {
@@ -42,7 +55,6 @@
     &:hover,
     &:active {
       color: $color-green-2;
-      box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
     }
   }
 
@@ -51,6 +63,11 @@
     border-top: 1px solid $color-white;
     padding-top: 2rem;
     width: 80%;
-    // float: right;
+    float: right;
+
+    @include responsive(tablet-portrait) {
+      width: 100%;
+      text-align: center;
+    }
   }
 }
