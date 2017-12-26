@@ -46,3 +46,8 @@ body {
 button {
   cursor: pointer;
 }
+
+::selection {
+  background-color: $color-green-1;
+  color: $color-white;
+}
