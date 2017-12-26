@@ -10,7 +10,7 @@
     "start": "npm-run-all --parallel devserver watch:scss",
 
     "compile:scss": "node-sass scss/styles.scss assets/css/styles.comp.css",
-    "concat:css": "concat assets/icons/linea/linea-icons.css assets/css/styles.comp.css -o assets/css/styles.concat.css",
+    "concat:css": "concat -o assets/css/styles.concat.css assets/icons/linea-icons.css assets/css/styles.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' assets/css/styles.concat.css -o assets/css/styles.prefix.css",
     "compress:css": "node-sass assets/css/styles.prefix.css assets/css/styles.css --output-style compressed",
     "build:css": "npm-run-all compile:scss concat:css prefix:css compress:css"
